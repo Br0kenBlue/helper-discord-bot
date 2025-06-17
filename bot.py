@@ -70,4 +70,4 @@ async def fragP(interaction: discord.Interaction, wax: int, fragrance_oil: int):
 async def fragOil(interaction: discord.Interaction, fragrance_percentage: int, wax: int):
     await interaction.response.send_message(f"Fragrance Oil ={wax*fragrance_percentage/100}ml for wax = {wax} and fragrance % = {fragrance_percentage}.")
 
-bot.run(token=BOT_TOKEN, log_handler=handler, log_level=logging.DEBUG)
+bot.run(token=token, log_handler=handler, log_level=logging.DEBUG)
