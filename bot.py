@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import logging
 import os
+import webserver
 
 token=os.environ['BOT_TOKEN']
 
@@ -68,4 +69,5 @@ async def fragP(interaction: discord.Interaction, wax: int, fragrance_oil: int):
 async def fragOil(interaction: discord.Interaction, fragrance_percentage: int, wax: int):
     await interaction.response.send_message(f"Fragrance Oil ={wax*fragrance_percentage/100}ml for wax = {wax} and fragrance % = {fragrance_percentage}.")
 
+webserver.keep_alive()
 bot.run(token=token, log_handler=handler, log_level=logging.DEBUG)
