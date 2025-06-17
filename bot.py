@@ -1,11 +1,9 @@
 import discord
 from discord.ext import commands
 import logging
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
-token=os.getenv('BOT_TOKEN')
+token=os.environ['BOT_TOKEN']
 
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
