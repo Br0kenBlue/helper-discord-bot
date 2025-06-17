@@ -1,7 +1,0 @@
-{
-  "name":"Joci-bot",
-    "compatibility-date":"2025-06-17",
-    "assets":{
-  "directory":"./dist"
-  }
-}
