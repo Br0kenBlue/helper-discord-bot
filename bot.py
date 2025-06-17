@@ -1,12 +1,7 @@
 import discord
 from discord.ext import commands
 import logging
-from dotenv import load_dotenv
-import os
 from discord import app_commands
-
-load_dotenv()
-token = os.getenv('BOT_TOKEN')
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 intents = discord.Intents.default()
@@ -70,4 +65,4 @@ async def fragP(interaction: discord.Interaction, wax: int, fragrance_oil: int):
 async def fragOil(interaction: discord.Interaction, fragrance_percentage: int, wax: int):
     await interaction.response.send_message(f"Fragrance Oil ={wax*fragrance_percentage/100}ml for wax = {wax} and fragrance % = {fragrance_percentage}.")
 
-bot.run(token=token, log_handler=handler, log_level=logging.DEBUG)
+bot.run(token=Bot_TOKEN, log_handler=handler, log_level=logging.DEBUG)
